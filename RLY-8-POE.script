@@ -1,0 +1,171 @@
+{
+  "adapters": [
+    {
+      "model": "GenericNetworkAdapter",
+      "ip": "tcp://192.168.99.112:2000",
+      "ports": [
+        {
+          "id": "generic_relay",
+          "name": "RLY-8-POE",
+          "methods": [
+            {
+              "id": "relay1",
+              "name": "Relay1",
+              "command": "%\r",
+              "params": [
+                {
+                  "id": "on",
+                  "name": "On",
+                  "value": "{\"relay1\":\"on\"}"
+                },
+                {
+                  "id": "off",
+                  "name": "Off",
+                  "value": "{\"relay1\":\"off\"}"
+                }
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "relay2",
+              "name": "Relay2",
+              "command": "%\r",
+              "params": [
+                {
+                  "id": "on",
+                  "name": "On",
+                  "value": "{\"relay2\":\"on\"}"
+                },
+                {
+                  "id": "off",
+                  "name": "Off",
+                  "value": "{\"relay2\":\"off\"}"
+                }
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "relay3",
+              "name": "Relay3",
+              "command": "%\r",
+              "params": [
+                {
+                  "id": "on",
+                  "name": "On",
+                  "value": "{\"relay3\":\"on\"}"
+                },
+                {
+                  "id": "off",
+                  "name": "Off",
+                  "value": "{\"relay3\":\"off\"}"
+                }
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "relay4",
+              "name": "Relay4",
+              "command": "%\r",
+              "params": [
+                {
+                  "id": "on",
+                  "name": "On",
+                  "value": "{\"relay4\":\"on\"}"
+                },
+                {
+                  "id": "off",
+                  "name": "Off",
+                  "value": "{\"relay4\":\"off\"}"
+                }
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "relay5",
+              "name": "Relay5",
+              "command": "%\r",
+              "params": [
+                {
+                  "id": "on",
+                  "name": "On",
+                  "value": "{\"relay5\":\"on\"}"
+                },
+                {
+                  "id": "off",
+                  "name": "Off",
+                  "value": "{\"relay5\":\"off\"}"
+                }
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "relay6",
+              "name": "Relay6",
+              "command": "%\r",
+              "params": [
+                {
+                  "id": "on",
+                  "name": "On",
+                  "value": "{\"relay6\":\"on\"}"
+                },
+                {
+                  "id": "off",
+                  "name": "Off",
+                  "value": "{\"relay6\":\"off\"}"
+                }
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "relay7",
+              "name": "Relay7",
+              "command": "%\r",
+              "params": [
+                {
+                  "id": "on",
+                  "name": "On",
+                  "value": "{\"relay7\":\"on\"}"
+                },
+                {
+                  "id": "off",
+                  "name": "Off",
+                  "value": "{\"relay7\":\"off\"}"
+                }
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "relay8",
+              "name": "Relay8",
+              "command": "%\r",
+              "params": [
+                {
+                  "id": "on",
+                  "name": "On",
+                  "value": "{\"relay8\":\"on\"}"
+                },
+                {
+                  "id": "off",
+                  "name": "Off",
+                  "value": "{\"relay8\":\"off\"}"
+                }
+              ],
+              "type": "actions"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "styles": [
+    "generic_relay.icon=icon_power"
+  ],
+  "rules": {
+    "meeting_started": [
+      "generic_relay.relay1.on"
+    ],
+    "meeting_ended": [
+      "generic_relay.relay1.off"
+    ]
+  }
+}
